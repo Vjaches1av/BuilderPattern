@@ -39,10 +39,10 @@ public class Person {
 
         public Person build() {
             if (person.firstName == null || person.firstName.isBlank()) {
-                throw new IllegalArgumentException("Поле \"Имя\" обязательно для заполнения");
+                throw new IllegalStateException("Поле \"Имя\" обязательно для заполнения");
             }
             if (person.secondName == null || person.secondName.isBlank()) {
-                throw new IllegalArgumentException("Поле \"Фамилия\" обязательно для заполнения");
+                throw new IllegalStateException("Поле \"Фамилия\" обязательно для заполнения");
             }
             return person;
         }
